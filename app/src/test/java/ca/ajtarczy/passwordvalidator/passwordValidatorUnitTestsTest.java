@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 public class passwordValidatorUnitTestsTest {
+
     public static String pw = "Example1"; //a variable to keep track of the password globally. For now it is set to a password that will pass all tests.
 
     @Test
@@ -16,7 +17,7 @@ public class passwordValidatorUnitTestsTest {
     @Test
     public void passwordSize() throws Exception {
         //if password is not "password", then it passes this test.
-        assertTrue(!pw.equalsIgnoreCase("password"));
+        assertTrue(pw.length() >= 8);
     }
 
     @Test
